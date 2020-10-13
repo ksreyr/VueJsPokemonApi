@@ -1,17 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<main>
+  <px-header
+  :links="links"/>
+
+
+  <router-view  
+  class="container flex"/>
+  
+</main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PxHeader from '@/components/PxHeader'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PxHeader
+  },
+  data(){
+    return{
+     
+      links:[
+        {
+          title: 'Bulbasaur',
+          to:{name:'Pokemon', params:{pokemon:'bulbasaur', id:0}}
+        },
+        {
+          title: 'Charmander',
+          to:{name:'Pokemon', params:{pokemon:'charmander', id:3}}
+        }
+      ]
+    }
   }
 }
 </script>
