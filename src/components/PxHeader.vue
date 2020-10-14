@@ -13,6 +13,8 @@
       </div>
       <router-link class="bg-gray-400 text-gray-700 text-sm pt-1 pl-3 flex" 
        :to="{name:'List'}">List</router-link>
+       <button class="bg-gray-400 text-gray-700 text-sm pt-1 pl-3 flex"  
+       @click="goTo">HorizontalView</button>
    </nav>
   </header>
 </template>
@@ -24,6 +26,12 @@ export default {
     links:{
       type: Array,
       default: () => [],
+
+    }
+  },
+  methods:{
+    goTo(){
+      this.$router.push({name:'Horizontal'})
     }
   },
 }

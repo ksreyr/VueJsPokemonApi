@@ -4,6 +4,7 @@ import Home from "@/view/PxHome";
 import Error from "@/view/PxError";
 import Pokemon from "@/view/PxPokemon";
 import List from "@/view/PxList";
+import Horizontal from "@/view/PxHorrizontal";
 Vue.use(Router);
 
 export default new Router({
@@ -28,6 +29,11 @@ export default new Router({
 			path: "/List",
 			name: "List",
 			component: List,
+		},
+		{
+			path: "/Horizontal",
+			name: "Horizontal",
+			component: Horizontal,
 		},
 	],
 });
